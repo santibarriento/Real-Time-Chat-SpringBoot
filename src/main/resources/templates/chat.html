@@ -5,7 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Chat App</title>
     <!-- Enlaza la hoja de estilos personalizada -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+       /* styles.css para Real-Time Chat App */
+
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background: #4f46e5;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(79,70,229,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(79,70,229,0.07);
+    padding: 2rem 2.5rem;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+/* Título del chat */
+.container h1 {
+    font-size: 1.5rem;
+    color: #4f46e5;
+    margin-bottom: 1.5rem;
+}
+
+/* Área del chat */
+#chat {
+    background: #f1f5f9;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Mensajes individuales */
+#chat > div {
+    padding: 0.4rem 0.7rem;
+    margin-bottom: 0.5rem;
+    background: #eef2ff;
+    border-radius: 6px;
+    border-left: 4px solid #6366f1;
+    color: #3730a3;
+    word-break: break-word;
+    transition: background 0.2s;
+}
+
+#chat > div:last-child {
+    margin-bottom: 0;
+}
+
+/* Inputs */
+.input-group input[type="text"] {
+    border-radius: 6px;
+    border: 1px solid #c7d2fe;
+    background: #f8fafc;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    transition: border 0.2s;
+}
+
+.input-group input[type="text"]:focus {
+    border-color: #6366f1;
+    outline: none;
+    background: #fff;
+}
+
+/* Botón enviar */
+#sendMessage {
+    background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.6rem 2.2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+
+#sendMessage:hover, #sendMessage:focus {
+    background: linear-gradient(90deg, #4f46e5 60%, #6366f1 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #a5b4fc;
+    padding: 1.2rem 0 0.7rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+} </style>
+
     <!-- Enlaza Bootstrap para estilos rápidos y responsivos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <!-- Librería SockJS para WebSockets -->
