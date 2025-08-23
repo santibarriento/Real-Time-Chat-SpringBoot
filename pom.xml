@@ -12,6 +12,7 @@
 	<artifactId>app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>app</name>
+
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -62,6 +63,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
