@@ -2,10 +2,9 @@ services:
   - type: web
     name: real-time-chat-springboot
     plan: free
-
+    runtime: java
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/app.jar
-
     envVars:
       - key: PORT
         value: 8080
